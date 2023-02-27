@@ -164,7 +164,7 @@ models.append(('SVC', SVC()))
 results = []
 # evaluate each model in turn
 for name, model in models:
-    ## fit the model
+    # fit the model
     classifier = model
     classifier.fit(X, y)
     
