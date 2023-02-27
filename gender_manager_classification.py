@@ -184,11 +184,11 @@ for name, model in models:
     results.append([name, accuracy, tnr, tpr, fnr, fpr])
 
 results = pd.DataFrame(results,columns=("Model", "Accuracy", "True neg rate", "True pos rate", "False neg rate", "False pos rate"))
-results_long = pd.melt(results, id_vars=['model']).reset_index(drop=True)
+results_long = pd.melt(results, id_vars=['Model']).reset_index(drop=True)
 results_long
 
 g = sns.FacetGrid(results_long, col="variable", sharey=False, height=6)
-g.map_dataframe(sns.barplot, x="model",y="value",errorbar=None)
+g.map_dataframe(sns.barplot, x="Model",y="value",errorbar=None)
 g.set_titles(col_template="{col_name}", row_template="{row_name}")
 g.map(annotate_bars, fmt='.2g', fontsize=12, color='k')
 g.fig.tight_layout()
@@ -234,11 +234,11 @@ for name, model in models:
     results.append([name, accuracy, tnr, tpr, fnr, fpr])
 
 results = pd.DataFrame(results,columns=("Model", "Accuracy", "True neg rate", "True pos rate", "False neg rate", "False pos rate"))
-results_long = pd.melt(results, id_vars=['model']).reset_index(drop=True)
+results_long = pd.melt(results, id_vars=['Model']).reset_index(drop=True)
 results_long
 
 g = sns.FacetGrid(results_long, col="variable", sharey=False, height=6)
-g.map_dataframe(sns.barplot, x="model",y="value",errorbar=None)
+g.map_dataframe(sns.barplot, x="Model",y="value",errorbar=None)
 g.set_titles(col_template="{col_name}", row_template="{row_name}")
 g.map(annotate_bars, fmt='.2g', fontsize=12, color='k')
 g.fig.tight_layout()
