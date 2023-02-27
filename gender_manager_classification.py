@@ -183,7 +183,7 @@ for name, model in models:
     
     results.append([name, accuracy, tnr, tpr, fnr, fpr])
 
-results = pd.DataFrame(results,columns=("model", "accuracy", "tnr", "tpr", "fnr", "fpr"))
+results = pd.DataFrame(results,columns=("Model", "Accuracy", "True neg rate", "True pos rate", "False neg rate", "False pos rate"))
 results_long = pd.melt(results, id_vars=['model']).reset_index(drop=True)
 results_long
 
@@ -233,7 +233,7 @@ for name, model in models:
     
     results.append([name, accuracy, tnr, tpr, fnr, fpr])
 
-results = pd.DataFrame(results,columns=("model", "accuracy", "tnr", "tpr", "fnr", "fpr"))
+results = pd.DataFrame(results,columns=("Model", "Accuracy", "True neg rate", "True pos rate", "False neg rate", "False pos rate"))
 results_long = pd.melt(results, id_vars=['model']).reset_index(drop=True)
 results_long
 
